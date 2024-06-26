@@ -1,0 +1,45 @@
+<div class="d-flex flex-column flex-shrink-0 p-3 bg-light" style="width: 270px; height: 100% !important;">
+  <div class="d-flex flex-row align-items-center">
+    <a href="/" class="d-flex  mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+      <img class="img-fluid" style="height: 2.5em;" src="logo.webp" alt="{{ env.logoAlt }}">
+      <span class="fs-4">{{ env.nomeAplicacao }}</span>
+    </a>
+  </div>
+  <hr>
+  <ul class="nav nav-pills flex-column mb-auto">
+    <li class="nav-item ">
+      <a routerLink="/home" routerLinkActive="activeHostButton" class="nav-link link-dark hover"
+        aria-current="page">
+        <i class="fa-solid fa-house-chimney "></i>
+        Home
+      </a>
+    </li>
+    <li>
+      <a routerLink="/inova-potiguar" routerLinkActive="activeHostButton" class="nav-link link-dark hover">
+        <i class="fa-solid fa-gauge"></i>
+        Dashboard
+      </a>
+    </li>
+    <li>
+      <a routerLink="/inova-potiguar" routerLinkActive="activeHostButton" class="nav-link link-dark hover">
+        <i class="fa-regular fa-calendar-days"></i>
+        Eventos
+      </a>
+    </li>
+    <li>
+      <a routerLink="/inova-potiguar" routerLinkActive="activeHostButton" class="nav-link link-dark hover">
+        <i class="fa-solid fa-magnifying-glass-chart"></i>
+        Pesquisas
+      </a>
+    </li>
+  </ul>
+  <hr>
+  <div class="dropdown">
+    <a routerLink="/inova-potiguar" routerLinkActive="activeHostButton"
+      class="d-flex align-items-center link-dark text-decoration-none dropdown-toggle" id="dropdownUser2"
+      data-bs-toggle="dropdown" aria-expanded="false">
+      <img src="https://github.com/mdo.png" alt="" width="32" height="32" class="rounded-circle me-2">
+      <strong>Usuário</strong>
+    </a>
+  </div>
+</div>
