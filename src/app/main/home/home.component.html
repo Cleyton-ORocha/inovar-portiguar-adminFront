@@ -1,1 +1,49 @@
-<p>home works!</p>
+<section class="home">
+    <div class="row d-flex justify-content-center text-center" id="home">
+        <img src="assets/logo.svg" alt="{{ env.logoAlt }}" style="width: 13em;">
+        <h1 class="display-1 ">Bem Vindo!</h1>
+        <h2 class="fs-5 text-success fw-bold">VEJA O QUE AS PRINCIPAIS EMPRESAS DE TECNOLOGIA ESTÃO FAZENDO!</h2>
+    </div>
+    <hr>
+    <div class="card text-center" style="margin-top: 5em; border: 0px;">
+        <p-carousel 
+            [value]="products" 
+            [numVisible]="3" 
+            [numScroll]="3" 
+            [responsiveOptions]="responsiveOptions">
+                <ng-template pTemplate="header">
+                    <h2 class="fs-2 text-success fw-bold my-4">Eventos</h2>
+                </ng-template>
+                <ng-template let-product pTemplate="item">
+                    <div class="card" id="card-project" style="height: 100%;">
+                        <img src="assets/hero-1.png" class="card-img-top" alt="asdfsdfsdafd"
+                            style="height: 80%; object-fit: cover;">
+                        <div class="card-body" style="height: 8em;">
+                            <h5 class="card-title flex-fill"></h5>
+                            <p class="card-text"></p>
+                        </div>
+                    </div>
+                </ng-template>
+        </p-carousel>
+        <p-carousel 
+            [value]="products" 
+            [numVisible]="3" 
+            [numScroll]="3" 
+            [responsiveOptions]="responsiveOptions">
+                <ng-template pTemplate="header">
+                    <h2 class="fs-2 text-success fw-bold my-4">Pesquisas</h2>
+                </ng-template>
+                <ng-template let-product pTemplate="item">
+                    <div class="card" id="card-project" style="height: 100%;">
+                        <img src="assets/hero-1.png" class="card-img-top" alt="asdfsdfsdafd"
+                            style="height: 80%; object-fit: cover;">
+                        <div class="card-body" style="height: 8em;">
+                            <h5 class="card-title flex-fill"></h5>
+                            <p class="card-text"></p>
+                        </div>
+                    </div>
+                </ng-template>
+        </p-carousel>
+    </div>
+    <hr>
+</section>

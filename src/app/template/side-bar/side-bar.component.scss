@@ -2,3 +2,10 @@
     background-color: green;
     color: white !important;
 }
+:host {
+    .activeHostButton {
+      color: white !important;
+      background-color: green;
+    }
+  }
+  

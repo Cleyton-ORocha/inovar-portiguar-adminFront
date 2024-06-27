@@ -16,7 +16,7 @@ import { MainComponent } from './main/main.component';
 })
 export class AppComponent {
   title = 'inovar-portiguar-adminFront';
-  
-  public activeSide : Boolean = true;
- 
+
+  public activeSide: Boolean = true;
+
 }
