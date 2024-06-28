@@ -1,8 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import  DashboardComponent from './dashboard/dashboard.component';
-import HomeComponent from './home/home.component';
 import { NavBarComponent } from '../template/nav-bar/nav-bar.component';
+import DashboardComponent from './dashboard/dashboard.component';
+import HomeComponent from './home/home.component';
 
 @Component({
   selector: 'app-main',
@@ -17,5 +17,11 @@ import { NavBarComponent } from '../template/nav-bar/nav-bar.component';
   styleUrl: './main.component.scss'
 })
 export class MainComponent {
+
+  @Output() parentActiveSide = new EventEmitter<boolean>();
+
+  handleChildEvent(newValue: boolean) {
+    this.parentActiveSide.emit(newValue);
+  }
 
 }

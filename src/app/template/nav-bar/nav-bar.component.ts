@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { AppComponent } from '../../app.component';
 
 @Component({
   selector: 'app-nav-bar',
@@ -7,6 +8,15 @@ import { Component } from '@angular/core';
   templateUrl: './nav-bar.component.html',
   styleUrl: './nav-bar.component.scss'
 })
-export class NavBarComponent {
+export class NavBarComponent implements OnInit{
+  @Output() activeSideChild = new EventEmitter<boolean>();
+  public activeChild: boolean = true;
 
+  sendActiveSide(value: boolean) {
+    this.activeChild = !this.activeChild;
+    this.activeSideChild.emit(this.activeChild);
+  }
+  
+  constructor(){}
+  ngOnInit(): void {}
 }
