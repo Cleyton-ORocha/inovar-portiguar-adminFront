@@ -16,4 +16,5 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
 })
 export class SideBarComponent {
   public env = environmentApp;
+  public dashboardCollapse = false;
 }

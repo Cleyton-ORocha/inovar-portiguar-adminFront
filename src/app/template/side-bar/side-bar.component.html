@@ -14,12 +14,29 @@
         Home
       </a>
     </li>
+
     <li>
-      <a routerLink="/dashboard" routerLinkActive="activeHostButton" class="nav-link link-light hover">
-        <i class="fa-solid fa-gauge"></i>
+      <a routerLink="/dashboard" routerLinkActive="activeHostButton" (click)="dashboardCollapse = !dashboardCollapse" class="nav-link link-light hover ">
+          <i class="fa-solid fa-gauge"></i>
         Dashboard
       </a>
     </li>
+    @if (dashboardCollapse) {
+      <li>
+        <a class="nav-link link-light hover ms-3 my-2">
+            <i class="fa-solid fa-calendar-check"></i>
+          Eventos
+        </a>
+        <a class="nav-link link-light hover ms-3 my-2">
+            <i class="fa-solid fa-chart-bar"></i>
+          Pesquisas
+        </a>
+      </li>
+    }
+
+    
+    
+    
     <li>
       <a routerLink="/inova-potiguar" routerLinkActive="activeHostButton" class="nav-link link-light hover">
         <i class="fa-regular fa-calendar-days"></i>
